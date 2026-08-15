@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Untuk Acha ❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= BACKGROUND ================= -->
+
+<div class="noise"></div>
+
+<div class="light one"></div>
+<div class="light two"></div>
+<div class="light three"></div>
+
+<div class="cursor"></div>
+
+<div class="blob blob1"></div>
+<div class="blob blob2"></div>
+
+<div id="flash"></div>
+<div id="flowerTransition" class="flower-transition"></div>
+
+<!-- ================= LOADING ================= -->
+
+<div id="loading" class="loading-screen">
+
+  <div class="loading-content">
+
+    <h2>preparing something for you...</h2>
+
+    <div class="loading-bar">
+      <span></span>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- ================= INTRO ================= -->
+
+<section id="intro">
+
+  <div class="title">
+
+    <span>for</span>
+
+    <h1>Acha.</h1>
+
+    <small>something made only for one person.</small>
+
+  </div>
+
+  <div id="puzzle" class="puzzle"></div>
+
+  <button id="nextBtn" onclick="openLetter()">
+    continue →
+  </button>
+
+</section>
+
+<!-- ================= GIFT SCENE ================= -->
+
+<section id="giftScene" class="gift-scene">
+
+  <!-- Envelope -->
+
+  <div id="envelopeCard"
+       class="gift-card envelope-card"
+       onclick="openBouquet()">
+
+    <div class="icon-wrap">
+
+      <svg width="90" height="90" viewBox="0 0 120 120">
+        <rect x="22" y="38" width="76" height="48" rx="10" fill="#ff4f8b"/>
+        <path d="M22 42 L60 68 L98 42"
+              fill="none"
+              stroke="#fff"
+              stroke-width="6"
+              stroke-linecap="round"/>
+        <path d="M22 84 L48 58 M98 84 L72 58"
+              fill="none"
+              stroke="#fff"
+              stroke-width="5"/>
+      </svg>
+
+    </div>
+
+    <h3>Ada Surat Masuk!</h3>
+
+    <p>Ketuk amplop di atas untuk membuka surat ❤️</p>
+
+  </div>
+
+  <!-- Flower -->
+
+  <div id="flowerCard" class="gift-card flower-card">
+
+    <div class="bouquet-svg">
+
+      <svg width="120" height="140" viewBox="0 0 140 160">
+
+        <g class="stem">
+          <line x1="70" y1="150" x2="70" y2="90"
+                stroke="#4CAF50"
+                stroke-width="6"/>
+
+          <path d="M70 120 Q48 105 36 118"
+                stroke="#4CAF50"
+                stroke-width="4"
+                fill="none"/>
+
+          <path d="M70 110 Q92 95 108 108"
+                stroke="#4CAF50"
+                stroke-width="4"
+                fill="none"/>
+        </g>
+
+        <g class="petals">
+
+          <circle cx="70" cy="52" r="18" fill="#ff8db7"/>
+          <circle cx="48" cy="70" r="15" fill="#ffb2cf"/>
+          <circle cx="92" cy="70" r="15" fill="#ffb2cf"/>
+          <circle cx="58" cy="34" r="12" fill="#ffd3e3"/>
+          <circle cx="82" cy="34" r="12" fill="#ffd3e3"/>
+
+        </g>
+
+        <path d="M55 122 L85 122 L76 152 L64 152 Z"
+              fill="#ff4f8b"/>
+
+      </svg>
+
+    </div>
+
+    <h3>Bunga Lily Spesial Untukmu! 🦋</h3>
+
+    <p>"Seperti lily putih yang indah, kamu selalu menyejukkan hari-hariku."</p>
+
+    <button id="acceptFlower"
+            onclick="showLetter()">
+      Terima Bunga & Dengar Lagu ♫
+    </button>
+
+  </div>
+
+</section>
+
+<!-- ================= LETTER ================= -->
+
+<section id="letterPage">
+
+  <div class="paper">
+
+    <div class="tape left"></div>
+    <div class="tape right"></div>
+
+    <h2>my little confession.</h2>
+
+    <div class="quote">
+      “Beberapa perasaan ternyata lebih indah saat akhirnya berani diucapkan.”
+    </div>
+
+    <!-- Surat -->
+
+    <div id="typed" class="typing"></div>
+
+    <!-- Music Experience -->
+
+    <div id="musicSection" class="music-section">
+
+      <div class="music-player">
+
+        <div id="vinyl" class="vinyl">
+          <div class="vinyl-center"></div>
+        </div>
+
+        <div class="music-info">
+
+          <span class="now-playing">♫ now playing</span>
+
+          <strong>Take A Chance With Me</strong>
+
+          <small>NIKI</small>
+
+          <div class="progress-container">
+            <div id="musicProgress"
+                 class="music-progress"></div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Floating confession -->
+
+      <div class="lyric-area">
+
+        <div id="lyricLine"
+             class="lyric-line"></div>
+
+      </div>
+
+    </div>
+
+    <!-- Ending Message -->
+
+    <div id="finalMessage" class="final-message">
+      nggak usah jawab sekarang...
+      aku cuma pengen kamu jujur sama hatimu.
+    </div>
+
+    <!-- Decor -->
+
+    <div class="decor">
+
+      <div class="pressed-flower flower1">❀</div>
+      <div class="pressed-flower flower2">✿</div>
+      <div class="pressed-flower flower3">❁</div>
+
+      <div class="wax-seal">A</div>
+
+    </div>
+
+    <!-- Audio -->
+
+    <audio id="bgMusic" preload="auto" playsinline>
+      <source src="assets/SaveTik.io_7376458786313211142 (1).mp3"
+              type="audio/mpeg">
+    </audio>
+
+    <!-- Typewriter Sound -->
+
+    <audio id="typeSound" preload="auto">
+      <source src="assets/type.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Music Toggle -->
+
+    <button id="musicToggle"
+            onclick="toggleMusic()"
+            aria-label="Play atau pause musik">
+      ♫
+    </button>
+
+    <!-- Footer -->
+
+    <div class="footer">
+
+      <div>— Arifin</div>
+
+      <div id="date"></div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
