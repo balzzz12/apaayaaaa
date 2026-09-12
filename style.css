@@ -1341,3 +1341,1422 @@ body.music-on::after{
   }
 
 }
+
+/* ================= CUTE PASTEL FINAL THEME ================= */
+
+:root {
+  --pink: #ff8eaf;
+  --dark-pink: #d95d88;
+  --purple: #9d8bea;
+  --cream: #fffaf1;
+  --brown: #624b58;
+  --soft-brown: #9d8490;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: var(--brown);
+  background:
+    radial-gradient(circle at 10% 20%, #ffd8e6 0 7%, transparent 24%),
+    radial-gradient(circle at 90% 80%, #d9d0ff 0 8%, transparent 26%),
+    linear-gradient(135deg, #fff5f3, #ffeaf1 50%, #f0ebff);
+}
+
+h1,
+h2,
+button {
+  font-family: "Baloo 2", cursive;
+}
+
+.background-decoration {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.cloud,
+.star,
+.heart,
+.doodle {
+  position: absolute;
+  user-select: none;
+}
+
+.cloud {
+  font-size: 65px;
+  opacity: .55;
+  animation: cloudMove 12s ease-in-out infinite;
+}
+
+.cloud-one {
+  top: 8%;
+  left: 4%;
+}
+
+.cloud-two {
+  top: 16%;
+  right: 5%;
+  font-size: 50px;
+  animation-delay: 3s;
+}
+
+.cloud-three {
+  bottom: 9%;
+  left: 10%;
+  font-size: 45px;
+  animation-delay: 6s;
+}
+
+@keyframes cloudMove {
+  50% {
+    transform: translate(25px, -12px);
+  }
+}
+
+.star {
+  color: #e795b0;
+  font-size: 22px;
+  animation: sparkle 2.4s ease-in-out infinite;
+}
+
+.star-one {
+  top: 20%;
+  left: 20%;
+}
+
+.star-two {
+  top: 35%;
+  right: 16%;
+  animation-delay: .6s;
+}
+
+.star-three {
+  top: 13%;
+  right: 30%;
+  font-size: 27px;
+  animation-delay: 1.2s;
+}
+
+.star-four {
+  bottom: 25%;
+  right: 12%;
+  animation-delay: 1.8s;
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: .3;
+    transform: scale(.8) rotate(0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.3) rotate(15deg);
+  }
+}
+
+.heart {
+  color: #f38daf;
+  font-size: 28px;
+  animation: heartUp 6s ease-in-out infinite;
+}
+
+.heart-one {
+  top: 28%;
+  left: 8%;
+}
+
+.heart-two {
+  right: 8%;
+  bottom: 30%;
+  font-size: 20px;
+  animation-delay: 2s;
+}
+
+.heart-three {
+  left: 18%;
+  top: 65%;
+  font-size: 18px;
+  animation-delay: 4s;
+}
+
+@keyframes heartUp {
+  50% {
+    transform: translateY(-20px) rotate(12deg);
+    opacity: .9;
+  }
+}
+
+.doodle {
+  color: #dc8ca8;
+  font-size: 38px;
+  opacity: .55;
+  animation: doodleFloat 5s ease-in-out infinite;
+}
+
+.doodle-one {
+  top: 44%;
+  left: 4%;
+}
+
+.doodle-two {
+  right: 5%;
+  top: 53%;
+  animation-delay: 2s;
+}
+
+@keyframes doodleFloat {
+  50% {
+    transform: rotate(15deg) translateY(-10px);
+  }
+}
+
+.blob {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: .4;
+  pointer-events: none;
+  z-index: -2;
+}
+
+.blob-one {
+  width: 280px;
+  height: 280px;
+  background: #ffb5ce;
+  top: -100px;
+  left: -80px;
+}
+
+.blob-two {
+  width: 330px;
+  height: 330px;
+  background: #c6b9ff;
+  right: -110px;
+  bottom: -130px;
+}
+
+.blob-three {
+  width: 180px;
+  height: 180px;
+  background: #ffe6a8;
+  top: 45%;
+  left: 42%;
+}
+
+/* Loading */
+
+.loading-screen {
+  background: linear-gradient(135deg, #fff1f4, #f0eaff);
+}
+
+.loading-card {
+  position: relative;
+  width: min(360px, 88%);
+  padding: 32px 26px;
+  text-align: center;
+  border: 3px solid #fff;
+  border-radius: 30px;
+  background: rgba(255,255,255,.65);
+  box-shadow: 0 25px 60px rgba(160,110,140,.18);
+}
+
+.loading-character {
+  font-size: 36px;
+  color: var(--dark-pink);
+  animation: bounceCute 1.5s infinite;
+}
+
+.loading-sticker {
+  position: absolute;
+  top: 16px;
+  right: 22px;
+  color: var(--pink);
+  font-size: 26px;
+}
+
+.loading-card h2 {
+  margin: 12px 0 2px;
+  color: var(--dark-pink);
+  font-size: 27px;
+}
+
+.loading-card p,
+.loading-card small {
+  color: var(--soft-brown);
+  font-size: 13px;
+}
+
+.loading-card small {
+  display: block;
+  margin-top: 13px;
+}
+
+@keyframes bounceCute {
+  50% {
+    transform: translateY(-8px) rotate(-4deg);
+  }
+}
+
+/* Intro */
+
+.page,
+.intro-page {
+  min-height: 100vh;
+}
+
+.intro-card {
+  width: min(500px, 94vw);
+  padding: 35px 28px;
+  text-align: center;
+  border: 3px solid rgba(255,255,255,.85);
+  border-radius: 38px;
+  background: rgba(255,255,255,.53);
+  box-shadow: 0 25px 70px rgba(145,91,125,.16);
+  backdrop-filter: blur(16px);
+  animation: cardIn 1s ease;
+}
+
+@keyframes cardIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.top-decoration {
+  color: var(--pink);
+  letter-spacing: 8px;
+  font-size: 20px;
+}
+
+.mini-label,
+.gift-label,
+.letter-label {
+  color: #bd8a9d;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.intro-card h1 {
+  margin: 4px 0;
+  color: #c95680;
+  font-size: clamp(70px, 18vw, 105px);
+  line-height: .9;
+  text-shadow: 4px 5px 0 #fff;
+}
+
+.intro-card h1 span {
+  color: var(--pink);
+  font-size: .42em;
+  vertical-align: top;
+}
+
+.intro-subtitle {
+  margin: 15px auto 20px;
+  max-width: 280px;
+  color: var(--soft-brown);
+  font-size: 14px;
+}
+
+.sticker-row {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  font-size: 27px;
+}
+
+.puzzle-title,
+.puzzle-note {
+  color: #ad8492;
+  font-size: 12px;
+}
+
+.puzzle-title {
+  margin-bottom: 12px;
+}
+
+.puzzle-note {
+  margin-top: 15px;
+}
+
+.puzzle {
+  justify-content: center;
+}
+
+.tile {
+  border: 5px solid rgba(255,255,255,.8);
+  border-radius: 25px;
+  box-shadow: 0 14px 25px rgba(150,90,120,.15);
+}
+
+.tile:hover {
+  transform: translateY(-8px) rotate(4deg) scale(1.05);
+}
+
+/* Buttons */
+
+button {
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ff78a3, #b18ceb);
+  box-shadow: 0 12px 25px rgba(215,99,145,.25);
+}
+
+button:hover {
+  background: linear-gradient(135deg, #ff6597, #9678df);
+}
+
+/* Gift */
+
+.gift-scene {
+  background:
+    radial-gradient(circle, rgba(255,255,255,.7) 1.5px, transparent 2px) 0 0 / 24px 24px,
+    linear-gradient(135deg, #ffd9e6, #e9ddff);
+}
+
+.gift-card {
+  border: 4px solid #fff;
+  border-radius: 35px;
+  background: #fffaf1;
+  box-shadow: 0 25px 60px rgba(160,90,125,.2);
+}
+
+.gift-card-decoration {
+  color: var(--pink);
+  letter-spacing: 8px;
+}
+
+.envelope-icon,
+.bouquet-emoji {
+  margin: 10px 0;
+  font-size: 82px;
+  animation: bounceCute 2s infinite;
+}
+
+.gift-card h2 {
+  margin: 5px 0;
+  color: #d65d87;
+  font-size: 32px;
+}
+
+.gift-card p {
+  color: var(--soft-brown);
+  line-height: 1.7;
+}
+
+.tap-hint {
+  margin-top: 18px;
+  color: #e58aaa;
+  font-size: 12px;
+}
+
+/* Letter */
+
+.paper {
+  border: 4px solid rgba(255,255,255,.8);
+  background: rgba(255,251,244,.93);
+  box-shadow: 0 30px 80px rgba(130,80,110,.2);
+}
+
+.letter-label {
+  margin-bottom: 5px;
+}
+
+.paper h2 {
+  color: #c95680;
+  font-size: 52px;
+}
+
+.quote {
+  padding: 14px 18px;
+  border-radius: 18px;
+  background: #fff0f4;
+  color: #a97486;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.typing {
+  font-family: "Nunito", sans-serif;
+  color: #66515a;
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+.music-title {
+  margin-bottom: 10px;
+  color: #bd8498;
+  text-align: center;
+  font-size: 12px;
+}
+
+.music-player {
+  border: 2px solid #ffe0e9;
+  background: #fff7f3;
+}
+
+.lyric-label {
+  color: #bd8498;
+}
+
+#lyricLine {
+  color: #d15e87;
+}
+
+.final-message {
+  padding: 18px;
+  border-radius: 20px;
+  background: #fff0f4;
+  color: #a96b82;
+  text-align: center;
+  line-height: 1.7;
+}
+
+.letter-flower {
+  margin: 22px 0 5px;
+  text-align: center;
+  font-size: 25px;
+  letter-spacing: 8px;
+}
+
+.wax-seal {
+  background: linear-gradient(135deg, #ed709a, #b95483);
+}
+
+.footer {
+  color: #b58d9d;
+}
+/* =========================================
+   📱 MOBILE FIX FINAL
+========================================= */
+
+@media (max-width: 768px) {
+
+  html,
+  body {
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  /* =========================
+     SECTION / INTRO
+  ========================= */
+
+  section {
+    position: relative;
+    inset: auto;
+
+    width: 100%;
+    min-height: 100dvh;
+    height: auto;
+
+    padding: 20px 12px 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  /* =========================
+     INTRO CARD
+  ========================= */
+
+  .intro-card {
+    width: 100%;
+    max-width: 390px;
+
+    margin: 0 auto;
+
+    padding: 25px 15px 30px;
+
+    border-radius: 30px;
+  }
+
+  .top-decoration {
+    font-size: 17px;
+    letter-spacing: 5px;
+  }
+
+  .mini-label {
+    font-size: 10px;
+  }
+
+  .intro-card h1 {
+    font-size: clamp(58px, 20vw, 80px);
+    line-height: .9;
+    margin: 5px 0 12px;
+  }
+
+  .intro-subtitle {
+    max-width: 270px;
+    margin: 12px auto 18px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .sticker-row {
+    gap: 12px;
+    margin-bottom: 18px;
+    font-size: 24px;
+  }
+
+  /* =========================
+     PUZZLE
+  ========================= */
+
+  .puzzle-title {
+    font-size: 11px;
+    margin-bottom: 10px;
+  }
+
+  .puzzle {
+    width: 100%;
+    max-width: 290px;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 9px;
+
+    margin: 0 auto;
+  }
+
+  .tile {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+
+    border-radius: 18px;
+    border: 4px solid rgba(255,255,255,.85);
+  }
+
+  .puzzle-note {
+    margin-top: 12px;
+    font-size: 11px;
+  }
+
+  /* =========================
+     TOMBOL LANJUT
+  ========================= */
+
+  #nextBtn {
+    display: block !important;
+
+    position: relative;
+    z-index: 20;
+
+    margin: 18px auto 0;
+
+    padding: 13px 28px;
+
+    font-size: 13px;
+
+    pointer-events: auto;
+  }
+
+  /* =========================
+     GIFT
+  ========================= */
+
+  .gift-scene {
+    width: 100%;
+    height: 100dvh;
+
+    padding: 15px;
+  }
+
+  .gift-card {
+    width: 92%;
+    max-width: 330px;
+  }
+
+  /* =========================
+     LETTER
+  ========================= */
+
+  #letterPage {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100dvh;
+
+    padding: 12px;
+
+    overflow: hidden;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  .paper {
+    width: 100%;
+    height: calc(100dvh - 24px);
+
+    padding: 30px 20px;
+
+    border-radius: 25px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .paper h2 {
+    font-size: 40px;
+  }
+
+  .typing {
+    font-size: 17px;
+    line-height: 1.85;
+    max-width: 100%;
+  }
+
+  /* =========================
+     MUSIC
+  ========================= */
+
+  .music-player {
+    width: 100%;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .vinyl {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+  }
+
+  #lyricLine {
+    font-size: 19px;
+  }
+
+  /* =========================
+     DECOR
+  ========================= */
+
+  .cloud {
+    font-size: 42px;
+  }
+
+  .blob {
+    filter: blur(65px);
+    opacity: .3;
+  }
+
+  .cursor {
+    display: none;
+  }
+
+  .paper-corner {
+    display: none;
+  }
+}
+
+
+/* =========================================
+   📱 HP KECIL
+========================================= */
+
+@media (max-width: 380px) {
+
+  section {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .intro-card {
+    padding: 23px 12px 28px;
+  }
+
+  .intro-card h1 {
+    font-size: 55px;
+  }
+
+  .puzzle {
+    max-width: 270px;
+    gap: 7px;
+  }
+
+  .paper {
+    padding: 27px 17px;
+  }
+
+  .typing {
+    font-size: 16px;
+  }
+}
+
+
+/* =========================================================
+   📱 FINAL OVERRIDE — HP
+   Fix: card tetap di kiri, puzzle kepotong, tombol Lanjut
+   tidak bisa ditekan / berada di luar layar.
+   ========================================================= */
+
+@media screen and (max-width: 768px) {
+
+  html,
+  body {
+    width: 100% !important;
+    min-width: 0 !important;
+    height: auto !important;
+    min-height: 100% !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+  }
+
+  /* Intro khusus: benar-benar memenuhi lebar HP */
+  #intro,
+  #intro.intro-page,
+  .intro-page {
+    position: relative !important;
+    inset: auto !important;
+
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 100dvh !important;
+    height: auto !important;
+
+    margin: 0 !important;
+    padding: 22px 12px 45px !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+
+    overflow: visible !important;
+  }
+
+  /* Card tidak boleh nempel kiri */
+  #intro .intro-card,
+  .intro-page .intro-card,
+  .intro-card {
+    width: min(100%, 390px) !important;
+    max-width: 390px !important;
+    min-width: 0 !important;
+
+    margin: 0 auto !important;
+    padding: 26px 15px 32px !important;
+
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+  }
+
+  .intro-card h1 {
+    font-size: clamp(58px, 20vw, 82px) !important;
+    line-height: .9 !important;
+    margin: 5px 0 13px !important;
+  }
+
+  .intro-subtitle {
+    max-width: 275px !important;
+    margin: 12px auto 18px !important;
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+  }
+
+  .sticker-row {
+    justify-content: center !important;
+    gap: 12px !important;
+    margin-bottom: 18px !important;
+    font-size: 24px !important;
+  }
+
+  /* Puzzle fleksibel mengikuti lebar HP */
+  #intro .puzzle,
+  .intro-page .puzzle,
+  .puzzle {
+    width: min(100%, 300px) !important;
+    max-width: 300px !important;
+    margin: 0 auto !important;
+
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 9px !important;
+
+    justify-content: center !important;
+  }
+
+  .puzzle .tile,
+  .tile {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important;
+    min-width: 0 !important;
+
+    border-radius: 18px !important;
+    border-width: 4px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Tombol harus berada setelah puzzle dan menerima tap */
+  #nextBtn {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+
+    position: relative !important;
+    z-index: 9999 !important;
+
+    width: auto !important;
+    min-width: 120px !important;
+
+    margin: 20px auto 0 !important;
+    padding: 13px 28px !important;
+
+    pointer-events: auto !important;
+    touch-action: manipulation !important;
+  }
+
+  .puzzle-note {
+    margin-top: 12px !important;
+    font-size: 11px !important;
+  }
+
+  /* Dekorasi tidak boleh menutupi tombol */
+  .petal,
+  .heart,
+  .star,
+  .cloud,
+  .flower,
+  .blob {
+    pointer-events: none !important;
+  }
+
+  /* Halaman gift */
+  .gift-scene {
+    width: 100% !important;
+    height: 100dvh !important;
+    min-height: 100dvh !important;
+    padding: 15px !important;
+    box-sizing: border-box !important;
+  }
+
+  .gift-card {
+    width: min(92%, 330px) !important;
+    max-width: 330px !important;
+  }
+
+  /* Halaman surat */
+  #letterPage {
+    width: 100% !important;
+    height: 100dvh !important;
+    padding: 12px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  #letterPage .paper,
+  .paper {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: calc(100dvh - 24px) !important;
+    max-height: none !important;
+
+    padding: 28px 19px !important;
+    box-sizing: border-box !important;
+
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  .paper h2 {
+    font-size: 40px !important;
+    line-height: 1 !important;
+  }
+
+  .typing {
+    max-width: 100% !important;
+    font-size: 17px !important;
+    line-height: 1.85 !important;
+  }
+
+  .cursor {
+    display: none !important;
+  }
+}
+
+/* HP kecil */
+@media screen and (max-width: 380px) {
+
+  #intro,
+  #intro.intro-page,
+  .intro-page {
+    padding: 18px 8px 40px !important;
+  }
+
+  #intro .intro-card,
+  .intro-page .intro-card,
+  .intro-card {
+    width: 100% !important;
+    padding: 23px 12px 28px !important;
+    border-radius: 27px !important;
+  }
+
+  .intro-card h1 {
+    font-size: 55px !important;
+  }
+
+  #intro .puzzle,
+  .intro-page .puzzle,
+  .puzzle {
+    max-width: 270px !important;
+    gap: 7px !important;
+  }
+
+  #nextBtn {
+    margin-top: 17px !important;
+  }
+
+  .paper {
+    padding: 25px 16px !important;
+  }
+
+  .typing {
+    font-size: 16px !important;
+  }
+}
+
+/* =========================================
+   PANTUN CARD
+========================================= */
+
+.pantun-card {
+  display: none;
+  text-align: center;
+}
+
+.pantun-emoji {
+  font-size: 58px;
+  margin: 8px 0 14px;
+  animation: gentleFloat 2.5s ease-in-out infinite;
+}
+
+.pantun-text {
+  margin: 22px auto;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.pantun-text p {
+  margin-bottom: 18px;
+}
+
+#pantunNext {
+  border: none;
+  padding: 12px 24px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 15px;
+  transition: .25s ease;
+}
+
+#pantunNext:hover {
+  transform: translateY(-3px) scale(1.03);
+}
+
+@keyframes gentleFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+
+/* =========================================
+   PANTUN CARD - CUTE VERSION
+========================================= */
+
+.pantun-card {
+  display: none;
+  width: min(88vw, 440px);
+  padding: 34px 32px 30px;
+  text-align: center;
+  border-radius: 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* dekorasi atas */
+.pantun-card .gift-card-decoration {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+/* bunga */
+.pantun-emoji {
+  font-size: 58px;
+  line-height: 1;
+  margin: 6px 0 18px;
+  animation: pantunFlowerFloat 2.5s ease-in-out infinite;
+}
+
+/* label kecil */
+.pantun-card .gift-label {
+  font-size: 13px;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+/* judul */
+.pantun-card h2 {
+  font-size: clamp(28px, 5vw, 36px);
+  line-height: 1.15;
+  margin: 10px 0 24px;
+}
+
+/* pantun */
+.pantun-text {
+  margin: 0 auto 24px;
+  max-width: 350px;
+}
+
+.pantun-text p {
+  margin: 0 0 17px;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.pantun-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* tombol NEXT */
+#pantunNext {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+
+  width: 100%;
+  max-width: 280px;
+  margin: 22px auto 0;
+
+  border: 0;
+  border-radius: 999px;
+
+  padding: 14px 24px;
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+}
+
+#pantunNext:hover {
+  transform: translateY(-3px) scale(1.02);
+}
+
+#pantunNext:active {
+  transform: scale(.96);
+}
+
+/* animasi bunga */
+@keyframes pantunFlowerFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+
+  50% {
+    transform: translateY(-8px) rotate(2deg);
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .pantun-card {
+    width: calc(100vw - 32px);
+    max-width: 420px;
+
+    padding: 28px 22px 24px;
+
+    border-radius: 28px;
+  }
+
+  .pantun-emoji {
+    font-size: 52px;
+    margin-bottom: 15px;
+  }
+
+  .pantun-card .gift-label {
+    font-size: 11px;
+    letter-spacing: 1.6px;
+  }
+
+  .pantun-card h2 {
+    font-size: 29px;
+    margin: 10px 0 21px;
+  }
+
+  .pantun-text {
+    max-width: 320px;
+    margin-bottom: 20px;
+  }
+
+  .pantun-text p {
+    font-size: 15px;
+    line-height: 1.65;
+    margin-bottom: 14px;
+  }
+
+  #pantunNext {
+    max-width: 100%;
+    padding: 14px 20px;
+    font-size: 15px;
+  }
+}
+
+/* =====================================================
+   FINAL FIX — INTRO CENTER + RESPONSIVE
+   Desktop • Tablet • HP
+===================================================== */
+
+/* BODY */
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* =====================================================
+   INTRO FULL SCREEN
+===================================================== */
+
+#intro.intro-page {
+  position: fixed !important;
+  inset: 0 !important;
+
+  width: 100vw !important;
+  height: 100dvh !important;
+  min-height: 100dvh !important;
+
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+
+  padding: 20px !important;
+  box-sizing: border-box !important;
+
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+
+/* =====================================================
+   CARD
+===================================================== */
+
+#intro .intro-card {
+  position: relative !important;
+
+  width: min(560px, 92vw) !important;
+  max-width: 560px !important;
+
+  margin: 0 auto !important;
+
+  box-sizing: border-box !important;
+
+  max-height: calc(100dvh - 40px);
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  flex-shrink: 0;
+}
+
+/* =====================================================
+   PUZZLE
+===================================================== */
+
+#intro .puzzle {
+  width: min(310px, 88vw) !important;
+  height: min(310px, 88vw) !important;
+
+  margin: 20px auto !important;
+
+  display: grid !important;
+
+  grid-template-columns: repeat(2, 1fr) !important;
+  grid-template-rows: repeat(2, 1fr) !important;
+
+  gap: 10px !important;
+
+  box-sizing: border-box !important;
+}
+
+/* TILE */
+
+#intro .puzzle .tile {
+  width: 100% !important;
+  height: 100% !important;
+
+  min-width: 0 !important;
+  min-height: 0 !important;
+
+  box-sizing: border-box !important;
+
+  border-radius: 22px !important;
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (min-width: 769px) and (max-width: 1100px) {
+
+  #intro.intro-page {
+    padding: 24px !important;
+  }
+
+  #intro .intro-card {
+    width: min(560px, 82vw) !important;
+  }
+
+}
+
+
+/* =====================================================
+   HP
+===================================================== */
+
+@media (max-width: 768px) {
+
+  #intro.intro-page {
+    position: fixed !important;
+    inset: 0 !important;
+
+    width: 100vw !important;
+    height: 100dvh !important;
+
+    padding: 14px !important;
+
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+    overflow-y: auto !important;
+  }
+
+  #intro .intro-card {
+    width: min(94vw, 430px) !important;
+
+    max-height: calc(100dvh - 28px);
+
+    padding: 24px 18px !important;
+
+    margin: auto !important;
+
+    border-radius: 28px !important;
+  }
+
+  #intro .puzzle {
+    width: min(310px, 86vw) !important;
+    height: min(310px, 86vw) !important;
+
+    margin: 16px auto !important;
+
+    gap: 8px !important;
+  }
+
+  #intro .puzzle .tile {
+    border-radius: 18px !important;
+  }
+
+}
+
+
+/* =====================================================
+   HP KECIL
+===================================================== */
+
+@media (max-width: 380px) {
+
+  #intro.intro-page {
+    padding: 8px !important;
+  }
+
+  #intro .intro-card {
+    width: 96vw !important;
+
+    padding: 20px 14px !important;
+
+    border-radius: 24px !important;
+  }
+
+  #intro .top-decoration {
+    font-size: 14px;
+  }
+
+  #intro .mini-label {
+    font-size: 11px;
+  }
+
+  #intro h1 {
+    font-size: clamp(42px, 15vw, 60px) !important;
+  }
+
+  #intro .intro-subtitle {
+    font-size: 13px !important;
+  }
+
+  #intro .sticker-row {
+    gap: 18px !important;
+  }
+
+  #intro .puzzle {
+    width: min(300px, 88vw) !important;
+    height: min(300px, 88vw) !important;
+
+    gap: 7px !important;
+  }
+
+  #intro .puzzle .tile {
+    border-radius: 16px !important;
+  }
+
+  #intro .puzzle-note {
+    font-size: 11px !important;
+  }
+
+}
